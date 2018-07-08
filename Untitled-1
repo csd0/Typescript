@@ -13,3 +13,28 @@ function validateEmail(email)
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
 }
+
+
+// in progress string email validator
+
+function test_email(email){
+    if(email){
+        let firstValidation = email.split('@');
+        firstValidation.length === 2?
+        let secondValidation = firstValidation[1].length && firstValidation[1].split('.')
+        :
+        return 'invalid email'
+        
+
+        (firstValidation.length!==2 || firstValidation[0].length<1 || firstValidation[1].length<1) 
+        ? 
+        message = 'invalid email'
+        : 
+        (secondValidation.length!==2 || secondValidation[0].length<1 || secondValidation[1].length<1)
+        ?
+        message = 'invalid email'
+        :
+        message = 'valid email'
+        return message;
+    }
+}
