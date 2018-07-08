@@ -1,0 +1,15 @@
+Thank you! yes@yes.com. Your newsletter preferences have been saved.
+
+
+Please enter a valid email!
+
+
+Request URL: http://adage.com/actions/newsletter_widget_signup.php
+
+
+
+function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
